@@ -3,22 +3,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: micro-java
+    app: jkube-example
     provider: jkube
     version: "1.0"
     group: com.redhat.training.openshift.hello
-  name: micro-java
+  name: jkube-example
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: micro-java
+      app: jkube-example
       provider: jkube
       group: com.redhat.training.openshift.hello
   template:
     metadata:
       labels:
-        app: micro-java
+        app: jkube-example
         provider: jkube
         version: "1.0"
         group: com.redhat.training.openshift.hello
@@ -32,7 +32,7 @@ spec:
         envFrom:
           - configMapRef:
               name: configmap-hello
-        image: micro-java:1.0
+        image: jkube-example:1.0
         imagePullPolicy: IfNotPresent
         name: quarkus
         ports:
