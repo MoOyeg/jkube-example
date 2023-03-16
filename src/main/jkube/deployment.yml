@@ -6,7 +6,7 @@ metadata:
     app: jkube-example
     provider: jkube
     version: "1.0"
-    group: com.redhat.training.openshift.hello
+    group: com.example.openshift.jkube.hello
   name: jkube-example
 spec:
   replicas: 1
@@ -14,14 +14,14 @@ spec:
     matchLabels:
       app: jkube-example
       provider: jkube
-      group: com.redhat.training.openshift.hello
+      group: com.example.openshift.jkube.hello
   template:
     metadata:
       labels:
         app: jkube-example
         provider: jkube
         version: "1.0"
-        group: com.redhat.training.openshift.hello
+        group: com.example.openshift.jkube.hello
     spec:
       containers:
       - env:

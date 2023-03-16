@@ -1,4 +1,4 @@
-package com.redhat.training.openshift.hello;
+package com.example.openshift.jkube.hello;
 
 import java.util.Optional;
 
